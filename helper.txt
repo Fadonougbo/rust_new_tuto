@@ -1,0 +1,13 @@
+En ruste quand un struct implement un trait pour pouvoir untiliser les method de ce trait le trait doit etre dans le scode globale (directement dans le main) ou importer
+
+En gros meme si un struct implement deja un trait il fait forcement importer ce trait avant d'utiliser ses methodes
+
+Pour utiliser une methode implementer depuis un trait il faut forcement que le trait sois dans le scode principale ou bien importer
+
+------------------------------------
+
+let x=i8::MIN; // Donne le nombre minimum que supporte i8
+
+let x=i8::MAX; //Donne le nombre maximum que support i8 
+On n'a le meme chose pour les autre type numeric
+
