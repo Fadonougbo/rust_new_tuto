@@ -1,29 +1,28 @@
 use rand::RngExt;
 
 
+#[derive(Debug,Clone, Copy)]
+struct  User{
+
+}
+
 fn main() {
 
-//    println!("Donne le numero");
-
-//    let number=rand::rng().random_range(10..=20);
+    let xx=String::from("œœ");
 
 
-   let a:i32=90;
+    let d=xx.len(); //2
 
-   let b=5;
+    let d=xx.chars().count(); //1
 
-   if a>b {
-    println!("a > b");
-   }else {
-    println!("a <= b");
-   }
+    let mut n = 10;
 
-   let x=i8::MIN;
+    let m = &mut n;
+    *m += 5;           // modification
+    println!("{n}");   // 15
 
-   println!("{x}");
+    // println!("{} ",xx+"text");
 
-//    println!("Le nombre est egale à {number} ");
-
-    // println!("Hello, world!");
-
+    // dbg!(a,b);
+  
 }
