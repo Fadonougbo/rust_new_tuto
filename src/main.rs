@@ -8,21 +8,39 @@ struct  User{
 
 fn main() {
 
-    let xx=String::from("œœ");
+    let text=String::from("Salut c'est john doe");
+
+    let mut i=0;
+
+    let bytes=text.as_bytes();
+
+    // Quand on parcourt une référence avec for, chaque élément est aussi une référence
 
 
-    let d=xx.len(); //2
+    let arr=[30,20,8,6];
 
-    let d=xx.chars().count(); //1
+    let xx=arr.iter().enumerate();
 
-    let mut n = 10;
+    for (i,element) in xx {
+        
+        println!("{element} {i}");
+    }
 
-    let m = &mut n;
-    *m += 5;           // modification
-    println!("{n}");   // 15
+    let v=b't';
 
-    // println!("{} ",xx+"text");
 
-    // dbg!(a,b);
+
+
+    // for byte in bytes {
+        
+    //     if *byte == b' ' {
+    //         break;
+    //     }
+
+    //     i+=1;
+
+    // }
+
+    // dbg!(i);
   
 }

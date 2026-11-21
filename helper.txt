@@ -1,81 +1,8 @@
-En ruste quand un struct implement un trait pour pouvoir untiliser les method de ce trait le trait doit etre dans le scode globale (directement dans le main) ou importer
+Reviens sur ceci:     dbg!(String::from("abc").chars());
 
-En gros meme si un struct implement deja un trait il fait forcement importer ce trait avant d'utiliser ses methodes
+-----------------------
 
-Pour utiliser une methode implementer depuis un trait il faut forcement que le trait sois dans le scode principale ou bien importer
-
-------------------------------------
-
-let x=i8::MIN; // Donne le nombre minimum que supporte i8
-
-let x=i8::MAX; //Donne le nombre maximum que support i8 
-On n'a le meme chose pour les autre type numeric
-
-dbg!([3,9,90]); // Nous permet de debuger n'import quelle element
-
-"".to_lowercase();
-"".to_uppercase();
-"Salut john doe".contains("doe");
-
-number.pow() //Pour faire un calcule de puissance
-
-L'ownership (« propriété ») est la façon dont Rust gère la mémoire sans garbage collector et sans free() manuel. Le compilateur vérifie des règles simples et sait exactement quand libérer chaque valeur.
-
-Chaque valeur a un propriétaire (une variable).
-Il n'y a qu'un seul propriétaire à la fois.
-Quand le propriétaire sort de sa portée (fin du bloc { }), la valeur est libérée automatiquement.
-
-Certain type simple son copier comme i,f,bool,char,les tuple car il implement le trait copy directement
-
-let a=5;
-let b=a
-
- pln!("{a} {b}") // a b // La valeur de a est copier directement dans la case memoir de b
-
- Certain type comme String , Vec , les structs n'implement pas le trait copy  automatiquement 
-
- let A=String::from("ok");
-
- let B=A
-
- dans ce cas la valeur de A n'existe plus car son espace memoire  est  supprimé . Si on veux forcement que A existe alors on peux utiliser clone
-
- let B=A.clone()
-
- Pour les structs on peux egalement les cloner mais il faut dabord qu'il implement le trait Clone 
-
- #[derive(Debug,Clone)]
-struct  User{
-
-}
-
-let a=User {}
-let b=a.clone()
+String::from("abc").find("c") // Donne la position de c Some(2)
 
 
-
-
-
-  let xx=String::from("œœ");
-
-
-    let d=xx.len(); //2
-
-    let d=xx.chars().count(); //1
-
-
-
-Une référence, c'est une adresse qui pointe vers une valeur sans en être propriétaire. Elle permet d'accéder à une donnée sans la déplacer ni la copier. 
-
-
-   let mut n = 10;
-
-    let m = &mut n;
-    *m += 5;           // modification
-    println!("{n}");   // 15
-
-Continu avec les mutable reference en rust (29)
-
-
-
-
+continu avec 32 string
