@@ -10,37 +10,14 @@ fn main() {
 
     let text=String::from("Salut c'est john doe");
 
-    let mut i=0;
+    dbg!(&text[2..]);
 
-    let bytes=text.as_bytes();
+    let x=2 as f32;
 
-    // Quand on parcourt une référence avec for, chaque élément est aussi une référence
+    let y=2.5;
 
-
-    let arr=[30,20,8,6];
-
-    let xx=arr.iter().enumerate();
-
-    for (i,element) in xx {
-        
-        println!("{element} {i}");
-    }
-
-    let v=b't';
+    dbg!(User{});
 
 
-
-
-    // for byte in bytes {
-        
-    //     if *byte == b' ' {
-    //         break;
-    //     }
-
-    //     i+=1;
-
-    // }
-
-    // dbg!(i);
   
 }

@@ -1,8 +1,23 @@
 Reviens sur ceci:     dbg!(String::from("abc").chars());
 
 -----------------------
+ let text=String::from("Salut c'est john doe");
 
-String::from("abc").find("c") // Donne la position de c Some(2)
+dbg!(&text[2..]); //Prend s le text j'usqua la fin en commeçant par la position 2
+                 //lut c'est john doe
+
+dbg!(&text[..7]); //Prends une portion du texte en commençant par le debut et en t'arretant a la position 5
+                    // Salut c
 
 
-continu avec 32 string
+let x=2 as f32;
+
+    let y=2.5;
+
+    2.5 as i32 aussi existe dans ce cas il prendra la partie entiere dans le calcule
+
+    dbg!(x*y);
+
+    ----------------
+
+Reviens sur les enums
