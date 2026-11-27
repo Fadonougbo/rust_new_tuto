@@ -1,23 +1,45 @@
+use std::io::ErrorKind::Other;
+
 use rand::RngExt;
 
 
-#[derive(Debug,Clone, Copy)]
-struct  User{
 
+#[derive(Debug)]
+enum  UserEnum {
+    Age,
+    Name,
+    Ville(String),
+    Move {x:i32}
 }
+
+
+impl UserEnum {
+
+    fn get_age(&self,a:i32){
+        println!("{a}");
+    }
+    
+}
+
+
 
 fn main() {
 
-    let text=String::from("Salut c'est john doe");
+    let age:Option<i32>=None;
 
-    dbg!(&text[2..]);
+//    let xx= age.unwrap(); // 19
 
-    let x=2 as f32;
+        // EN cas de none unwrap renvoie une panic
 
-    let y=2.5;
+        let x=190;
 
-    dbg!(User{});
+       let y= match x {
+            1=>1,
+            rest=>rest
+        };
 
+      let xx= age.unwrap_or(30);
 
-  
+     dbg!(y);
+
 }

@@ -1,23 +1,40 @@
 Reviens sur ceci:     dbg!(String::from("abc").chars());
 
 -----------------------
- let text=String::from("Salut c'est john doe");
-
-dbg!(&text[2..]); //Prend s le text j'usqua la fin en commeçant par la position 2
-                 //lut c'est john doe
-
-dbg!(&text[..7]); //Prends une portion du texte en commençant par le debut et en t'arretant a la position 5
-                    // Salut c
 
 
-let x=2 as f32;
+enum  UserEnum {
+    Age,
+    Name,
+    Ville(String,i32),
+    Move {x:i32}
+}
 
-    let y=2.5;
 
-    2.5 as i32 aussi existe dans ce cas il prendra la partie entiere dans le calcule
+impl UserEnum {
 
-    dbg!(x*y);
+    fn get_age(&self,a:i32){
+        println!("{a}");
+    }
+    
+}
 
-    ----------------
+Il n'existe pas de type null en rust
 
-Reviens sur les enums
+let age:Option<i32>=None;
+
+//    let xx= age.unwrap(); // 19
+
+        // EN cas de none unwrap renvoie une panic
+
+      let xx= age.unwrap_or(30); // Renvoie une valeur par defaut en cas None
+
+     dbg!(xx);
+
+------------------------------
+  let x:i32=190;
+
+       let y= match x {
+            1=>1,
+            rest=>rest
+        };
