@@ -1,45 +1,21 @@
-use std::io::ErrorKind::Other;
 
-use rand::RngExt;
-
-
-
-#[derive(Debug)]
-enum  UserEnum {
-    Age,
-    Name,
-    Ville(String),
-    Move {x:i32}
-}
-
-
-impl UserEnum {
-
-    fn get_age(&self,a:i32){
-        println!("{a}");
-    }
-    
-}
 
 
 
 fn main() {
 
-    let age:Option<i32>=None;
+    let vec:Vec<i32>=Vec::from([20,40,20]);
 
-//    let xx= age.unwrap(); // 19
+    for x in vec.iter() {
+        println!("{x}");
+    }
 
-        // EN cas de none unwrap renvoie une panic
+    let path=Path::new("helper.txt");
 
-        let x=190;
+    let f=File::open(path)?;
 
-       let y= match x {
-            1=>1,
-            rest=>rest
-        };
 
-      let xx= age.unwrap_or(30);
 
-     dbg!(y);
+     dbg!(f);
 
 }
